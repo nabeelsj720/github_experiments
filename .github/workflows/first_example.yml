@@ -12,8 +12,5 @@ jobs:
             echo "My first successfull github actions"
             ls -ltra
             cat README.md
-       # - name: List files
-       #   run: ls
-       # - name: Read files
-       #   run: cat README.md
+            cat index.html
 
