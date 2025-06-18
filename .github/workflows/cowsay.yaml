@@ -1,6 +1,7 @@
 
 name: Workflow on cowsay
-on : push
+on : 
+    workflow_dispatch
 
 jobs:
     cowsay_job:
