@@ -11,7 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - name: step level env
-              env: 
+              #env: 
                 #CONTAINER_REGISTRY: docker.io
                 #DOCKER_USERNAME: mdhack
                 #IMAGE_NAME: github-actions-nginx
