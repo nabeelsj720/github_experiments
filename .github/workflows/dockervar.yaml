@@ -2,16 +2,19 @@ name: Exploring Vairables and Secrets
 
 on: 
     push:
-
+env: 
+  CONTAINER_REGISTRY: docker.io
+  DOCKER_USERNAME: mdhack
+  IMAGE_NAME: github-actions-nginx
 jobs: 
     docker: 
         runs-on: ubuntu-latest
         steps: 
             - name: step level env
               env: 
-                CONTAINER_REGISTRY: docker.io
-                DOCKER_USERNAME: mdhack
-                IMAGE_NAME: github-actions-nginx
+                #CONTAINER_REGISTRY: docker.io
+                #DOCKER_USERNAME: mdhack
+                #IMAGE_NAME: github-actions-nginx
               run: echo  docker build -t ${{ env.CONTAINER_REGISTRY }}/$DOCKER_USERNAME/$IMAGE_NAME
 
             - run: echo docker login  --username=$DOCKER_USERNAME   --password=qwerty
