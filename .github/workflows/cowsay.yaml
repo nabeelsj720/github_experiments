@@ -1,0 +1,17 @@
+
+name: Workflow on cowsay
+on : push
+
+jobs:
+    cowsay_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Install cowsay
+          run: sudo apt-get install -y cowsay   
+        - name: running the command
+          run: cowsay  -f  dragon   "Run for cover,   dragon is there"   >> dragon.txt
+        - name: reading file
+          run: | 
+                cat dragon.txt
+                grep -i dragon dragon.txt 
+                ls -la
